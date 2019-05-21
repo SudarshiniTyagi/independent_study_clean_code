@@ -1,3 +1,5 @@
+library(gsubfn)
+
 shuffle_data <- function(grp1, grp2){
   l1 <- length(grp1)
   l2 <- length(grp2)
@@ -134,6 +136,7 @@ cat("DT Test Accuracy: ", accuracy*100, "\n")
 
 cat("___________________________________________________________________________\n")
 #RANDOM FOREST
+library(randomForest)
 rf_clf <- randomForest(diagnosis ~ . - diagnosis, data = train_data, importance=TRUE,
                        proximity=TRUE)
 
@@ -150,15 +153,16 @@ cat("RF Test Accuracy: ", accuracy*100, "\n")
 cat("___________________________________________________________________________\n")
 
 #SVM
-rf_clf <- svm(diagnosis ~ . - diagnosis, data = train_data, 
+library(e1071)
+svm_clf <- svm(diagnosis ~ . - diagnosis, data = train_data, 
               kernel = "linear", cost = 10, scale = FALSE)
 
-predictions_train <- predict(rf_clf, train_data[,-1], type='class')
+predictions_train <- predict(svm_clf, train_data[,-1], type='class')
 conf_mat <- table(train_data$diagnosis,predictions_train)
 accuracy <- sum(diag(conf_mat))/sum(conf_mat)
 cat("SVM Train Accuracy: ", accuracy*100, "\n")
 
-predictions_svm <- predict(rf_clf, test_data[,-1], type='class')
+predictions_svm <- predict(svm_clf, test_data[,-1], type='class')
 conf_mat <- table(test_data$diagnosis,predictions_svm)
 accuracy <- sum(diag(conf_mat))/sum(conf_mat)
 cat("SVM Test Accuracy: ", accuracy*100, "\n")
@@ -194,3 +198,5 @@ cat("\n\n\np_test: Decision Trees vs Random Forests")
 sample_0 <- test_data$diagnosis == predictions_dt
 sample_1 <- test_data$diagnosis == predictions_rf
 p_test(sample_0, sample_1)
+
+cat("\n___________________________________________________________________________\n")
