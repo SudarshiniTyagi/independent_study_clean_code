@@ -65,7 +65,6 @@ input_file = "ChiSquared.vals"
 # will draw num values, given
 # probabilities given by counts in expected
 def drawfromcategories(num, expected):
-        print(num)
         # if we have two bins (two categories)
         # bin 1 and bin 2
         # and we expect bin 1 to get a hit 2 of 5 times
