@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Two-Way Confidence Interval
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
