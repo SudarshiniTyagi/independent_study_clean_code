@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Difference between Two Means Significance Test
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
