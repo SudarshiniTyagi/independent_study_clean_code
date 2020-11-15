@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Multi-Variable Chi-Squared Significance Test
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
