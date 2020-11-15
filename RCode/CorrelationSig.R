@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Linear Correlation Significance Test
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
