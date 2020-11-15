@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Difference between Two Means Bias Corrected Confidence Interval
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
