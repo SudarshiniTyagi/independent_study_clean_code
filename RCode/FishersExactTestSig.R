@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Fisher's Exact Test - Significance Test
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
