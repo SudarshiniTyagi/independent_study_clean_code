@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 ######################################
 # Regression Confidence Interval Example 
 # From: Statistics is Easy! By Dennis Shasha and Manda Wilson
